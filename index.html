@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <title>Instagram Feed</title>
+</head>
+
+<body>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <i class="fa-brands fa-instagram fa-2x me-2"></i>
+      <a class="navbar-brand" href="#">Instagram</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="container-fluid d-flex justify-content-end">
+          <button type="button" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#postModal">
+            Create a new post
+          </button>
+          <!-- Modal -->
+          <div class="conteiner-fluid ">
+            <div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="postModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="postModalLabel">Create a new post</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Caption:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                      </div>
+                    </form>
+                    <div class="buttons">
+                      <button type="button" class="btn btn-light"><i class="fa-solid fa-camera"></i></button>
+                      <button type="button" class="btn btn-light"><i class="fa-solid fa-location-dot"></i></i></button>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Publish</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="navbar-nav mx-2  bg-secondary rounded">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light mx-2" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <i class="fa-solid fa-gear"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                  <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid d-flex my-5 justify-content-center">
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="pills-grid-tab" data-bs-toggle="pill" data-bs-target="#pills-grid"
+          type="button" role="tab"><i class="fa-solid fa-table-cells"></i></button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-single-tab" data-bs-toggle="pill" data-bs-target="#pills-single"
+          type="button" role="tab"><i class="fa-solid fa-square"></i></button>
+      </li>
+    </ul>
+  </div>
+  <div class="container-fluid d-flex ">
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="pills-grid" role="tabpanel">
+        <!--Primera fila-->
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+            <a class="thumbnail" href="#" data-image-id="firstPhoto" data-toggle="modal" data-title="first"
+              data-image="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+              data-target="#image-gallery">
+              <img class="img-thumbnail"
+                src="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+            <a class="thumbnail" href="#" data-image-id="secondPhoto" data-toggle="modal" data-title="second"
+              data-image="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+              data-target="#image-gallery">
+              <img class="img-thumbnail"
+                src="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+            <a class="thumbnail" href="#" data-image-id="thirdPhoto" data-toggle="modal" data-title="third"
+              data-image="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+              data-target="#image-gallery">
+              <img class="img-thumbnail"
+                src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+            </a>
+          </div>
+        </div>
+
+        <!--Segunda fila-->
+        <div class="row mt-4">
+          <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+            <a class="thumbnail" href="#" data-image-id="firstPhoto" data-toggle="modal" data-title="first"
+              data-image="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+              data-target="#image-gallery">
+              <img class="img-thumbnail"
+                src="https://www.superprof.co.uk/blog/wp-content/uploads/2021/11/taking-better-pictures-scaled.jpg">
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+            <a class="thumbnail" href="#" data-image-id="secondPhoto" data-toggle="modal" data-title="second"
+              data-image="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+              data-target="#image-gallery">
+              <img class="img-thumbnail"
+                src="https://images.unsplash.com/photo-1734467363155-8a7014e458a2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D">
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+            <a class="thumbnail" href="#" data-image-id="thirdPhoto" data-toggle="modal" data-title="third"
+              data-image="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+              data-target="#image-gallery">
+              <img class="img-thumbnail"
+                src="https://adventures.com/media/6169/how-to-take-pictures-of-the-northern-lights-camera-tripod-4.jpg?anchor=center&mode=crop&width=970&height=645&rnd=132633097450000000&format=jpg&quality=80">
+            </a>
+          </div>
+        </div>
+        <!--Tercera fila-->
+        <div class="row mt-4">
+          <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+            <a class="thumbnail" href="#" data-image-id="firstPhoto" data-toggle="modal" data-title="first"
+              data-image="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+              data-target="#image-gallery">
+              <img class="img-thumbnail"
+                src="https://plus.unsplash.com/premium_photo-1676655014366-7f9a87a17111?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGljdHVyZXN8ZW58MHx8MHx8fDA%3D">
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+            <a class="thumbnail" href="#" data-image-id="secondPhoto" data-toggle="modal" data-title="second"
+              data-image="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+              data-target="#image-gallery">
+              <img class="img-thumbnail"
+                src="https://media.flytographer.com/uploads/2023/06/Best-time-to-take-pictures-photographer-flytographer-8.jpeg">
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+            <a class="thumbnail" href="#" data-image-id="thirdPhoto" data-toggle="modal" data-title="third"
+              data-image="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+              data-target="#image-gallery">
+              <img class="img-thumbnail"
+                src="https://static-cse.canva.com/blob/1913104/tools-feature-magic-eraser-showcase_01-AFTER4x.jpg">
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="conteiner-fluid d-flex justify-content-center">
+      <div class="tab-pane fade" id="pills-single" role="tabpanel">
+        <!--Primera foto-->
+        <div class="row row-cols-12 ">
+          <div class="container pt-3 px-2 ">
+            <div class="col-12 d-flex justify-content-between border rounded px-3 py-3">
+              <h2>Primera foto</h2>
+              <p>07/25</p>
+            </div>
+            <div class="card" style="width: 700px;">
+              <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg" class="card-img-fluid"
+                alt="perritos">
+              <div class="card-body">
+                <h5 class="card-title">200 likes</h5>
+                <p class="card-text">Que majos son los perretes, mucho más que los humanos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Segunda foto-->
+        <div class="row row-cols-12 ">
+          <div class="container pt-3 px-2 ">
+            <div class="col-12 d-flex justify-content-between border rounded px-3 py-3">
+              <h2>Segunda foto</h2>
+              <p>09/25</p>
+            </div>
+            <div class="card" style="width: 700px;">
+              <img src="https://www.recordnet.com/gcdn/presto/2021/03/22/NRCD/9d9dd9e4-e84a-402e-ba8f-daa659e6e6c5-PhotoWord_003.JPG?width=660&height=425&fit=crop&format=pjpg&auto=webp" class="card-img-fluid"
+                alt="perritos">
+              <div class="card-body">
+                <h5 class="card-title">300 likes</h5>
+                <p class="card-text">Esta es mi amiga sacando una foto, solo que no le ha quitado la tapa y se va a ver en negro.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Tercera foto-->
+        <div class="row row-cols-12 ">
+          <div class="container pt-3 px-2 ">
+            <div class="col-12 d-flex justify-content-between border rounded px-3 py-3">
+              <h2>Tercera foto</h2>
+              <p>11/25</p>
+            </div>
+            <div class="card" style="width: 700px;">
+              <img src="https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=612x612&w=0&k=20&c=i4HYO7xhao7CkGy7Zc_8XSNX_iqG0vAwNsrH1ERmw2Q=" class="card-img-fluid"
+                alt="perritos">
+              <div class="card-body">
+                <h5 class="card-title">420 likes</h5>
+                <p class="card-text">A quien no le gusta unos buenos arboles, sobretodo si vives en la ciudad y te comes toda la contaminación de la gente que no sabe conducir, cambie de marcha cuidadano.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
+    integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
